@@ -76,7 +76,7 @@ html, body {
     }
 
         #tabs li a {
-            color: #EEEEEE;
+            color: #bbbbbb;
             display: block;
             /*font-size: 13px;*/
             font-weight: bold;
@@ -86,7 +86,7 @@ html, body {
         }
 
             #tabs li a:hover {
-                background: #cccccc; /*#759FCF;*/
+                /*background: #cccccc; /*#759FCF;*/*/
                 color: #FFFFFF;
             }
 
