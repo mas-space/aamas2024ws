@@ -109,6 +109,7 @@ html, body {
 .outline-2 {
     max-width: 810px;
     margin: auto; 
+    margin-top: 60px;
 }
 
 #postamble {
