@@ -150,6 +150,9 @@
              margin-bottom: 0em; 
              background: url(https://images.nasa.gov/images/landing_bg..jpg);
              }
+  .maintile {
+           max-width: 80%;
+  }
   .subtitle { text-align: center;
               font-size: medium;
               font-weight: bold;
