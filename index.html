@@ -247,7 +247,13 @@ In progress...</p>
 <div id="postamble" class="status">
 <p class="author">Author: Gauthier Picard</p>
 <p class="email">Email: <a href="mailto:gauthier.picard@onera.fr">gauthier.picard@onera.fr</a></p>
-<p class="date">Last modified: <script>document.write(document.lastModified);</script></p>
+<p class="date">Last modified: <span id="lastmodified"></span></p>
+	<script>
+        function printLastModified() {
+            let date = document.lastModified;
+            document.getElementById("lastmodified").innerHTML = date;
+        }
+    </script>
 </div>
 </body>
 </html>
