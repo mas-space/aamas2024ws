@@ -1,427 +1,534 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-05-27 Wed 14:56 -->
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>International Workshop on Autonomous Agents and Multi-Agent Systems for Space Applications</title>
-<meta name="author" content="Gauthier Picard" />
-<!--meta property="og:image" content="https://images.nasa.gov/images/landing_bg..jpg" /-->
-<meta property="og:image" content="https://mas-space.github.io/aamas2024ws/img/bg.jpg" />
-<meta property="og:title" content="International Workshop on Autonomous Agents and Multi-Agent Systems for Space Applications" />
-<meta property="og:type" content="website" />	
-<meta property="og:url" content="https://mas-space.github.io/aamas2024ws/" />
-<meta property="og:description" content="This workshop aims at disseminating and sharing recent advances in the use of agent-based and multi-agent-based models and techniques in the Space domain." /> 
-<link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="styles/bigblow/css/bigblow.css"/>
-<link rel="stylesheet" type="text/css" href="styles/bigblow/css/hideshow.css"/>
-<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/FP_Satellite_icon.svg/240px-FP_Satellite_icon.svg.png">
-<script type="text/javascript" src="styles/bigblow/js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/jquery.localscroll-min.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/jquery.zclip.min.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/bigblow.js"></script>
-<script type="text/javascript" src="styles/bigblow/js/hideshow.js"></script>
-<script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+    <!-- 2020-05-27 Wed 14:56 -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>International Workshop on Autonomous Agents and Multi-Agent Systems for Space Applications</title>
+    <meta name="author" content="Gauthier Picard"/>
+    <!--meta property="og:image" content="https://images.nasa.gov/images/landing_bg..jpg" /-->
+    <meta property="og:image" content="https://mas-space.github.io/aamas2024ws/img/bg.jpg"/>
+    <meta property="og:title"
+          content="International Workshop on Autonomous Agents and Multi-Agent Systems for Space Applications"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://mas-space.github.io/aamas2024ws/"/>
+    <meta property="og:description"
+          content="This workshop aims at disseminating and sharing recent advances in the use of agent-based and multi-agent-based models and techniques in the Space domain."/>
+    <link rel="stylesheet" type="text/css" href="styles/bigblow/css/htmlize.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/bigblow/css/bigblow.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/bigblow/css/hideshow.css"/>
+    <link rel="icon"
+          href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/FP_Satellite_icon.svg/240px-FP_Satellite_icon.svg.png">
+    <script type="text/javascript" src="styles/bigblow/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+    <script type="text/javascript" src="styles/bigblow/js/jquery.localscroll-min.js"></script>
+    <script type="text/javascript" src="styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script type="text/javascript" src="styles/bigblow/js/jquery.zclip.min.js"></script>
+    <script type="text/javascript" src="styles/bigblow/js/bigblow.js"></script>
+    <script type="text/javascript" src="styles/bigblow/js/hideshow.js"></script>
+    <script type="text/javascript" src="styles/lib/js/jquery.stickytableheaders.min.js"></script>
+    <script type="text/javascript">
+        /*
+        @licstart  The following is the entire license notice for the
+        JavaScript code in this tag.
+        
+        Copyright (C) 2012-2017 Free Software Foundation, Inc.
+        
+        The JavaScript code in this tag is free software: you can
+        redistribute it and/or modify it under the terms of the GNU
+        General Public License (GNU GPL) as published by the Free Software
+        Foundation, either version 3 of the License, or (at your option)
+        any later version.  The code is distributed WITHOUT ANY WARRANTY;
+        without even the implied warranty of MERCHANTABILITY or FITNESS
+        FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+        
+        As additional permission under GNU GPL version 3 section 7, you
+        may distribute non-source (e.g., minimized or compacted) forms of
+        that code without the copy of the GNU GPL normally required by
+        section 4, provided you include this license notice and a URL
+        through which recipients can access the Corresponding Source.
+        
+        
+        @licend  The above is the entire license notice
+        for the JavaScript code in this tag.
+        */
+        <!--/*--><![CDATA[/*><!--*/
+         function CodeHighlightOn(elem, id)
+         {
+           var target = document.getElementById(id);
+           if(null != target) {
+             elem.cacheClassElem = elem.className;
+             elem.cacheClassTarget = target.className;
+             target.className = "code-highlighted";
+             elem.className   = "code-highlighted";
+           }
+         }
+         function CodeHighlightOff(elem, id)
+         {
+           var target = document.getElementById(id);
+           if(elem.cacheClassElem)
+             elem.className = elem.cacheClassElem;
+           if(elem.cacheClassTarget)
+             target.className = elem.cacheClassTarget;
+         }
+        /*]]>*///-->
+    </script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">
-	<span class="maintitle"> International Workshop on Autonomous Agents and Multi-Agent Systems for Space Applications<br/><a href="https://mas-space.github.io/aamas2024ws/">MASSpace'24</a></span>
-<br/>
-	<span class="subtitle">at <a href="https://www.aamas2024-conference.auckland.ac.nz/" style="color:white">AAMAS 2024</a>, the 23rd International Conference on Autonomous Agents and Multi-Agent Systems</span>
-	</h1>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#scope">Descriptions</a></li>
-<li><a href="#dates">Call for Papers</a></li>
-<li><a href="#dates">Dates</a></li>
-<li><a href="#instructions">Submissions</a></li>
-<li><a href="#programme">Programme</a></li>
-<li><a href="#committees">Committees</a></li>
-</ul>
-</div>
-	<br/>
-</div>
+    <h1 class="title">
+        <span class="maintitle"> International Workshop on Autonomous Agents and Multi-Agent Systems for Space Applications<br/><a
+                href="https://mas-space.github.io/aamas2024ws/">MASSpace'24</a></span>
+        <br/>
+        <span class="subtitle">at <a href="https://www.aamas2024-conference.auckland.ac.nz/" style="color:white">AAMAS 2024</a>, the 23rd International Conference on Autonomous Agents and Multi-Agent Systems</span>
+    </h1>
+    <div id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <div id="text-table-of-contents">
+            <ul>
+                <li><a href="#scope">Descriptions</a></li>
+                <li><a href="#dates">Call for Papers</a></li>
+                <li><a href="#dates">Dates</a></li>
+                <li><a href="#instructions">Submissions</a></li>
+                <li><a href="#programme">Programme</a></li>
+                <li><a href="#committees">Committees</a></li>
+            </ul>
+        </div>
+        <br/>
+    </div>
 
-<div id="scope" class="outline-2">
-<h2 id="header-scope"><a id="id-scope"></a><span class="section-number-2">1</span>Description</h2>
-<div class="outline-text-2" id="text-short-description">
+    <div id="scope" class="outline-2">
+        <h2 id="header-scope"><a id="id-scope"></a><span class="section-number-2">1</span>Description</h2>
+        <div class="outline-text-2" id="text-short-description">
 
-<p>This workshop aims at disseminating and sharing recent advances in the use of agent-based and multi-agent-based models and techniques in the Space domain. Indeed, the use of agent-based and multi-agent systems (MAS) in aerospace and space is gaining traction, as they offer a promising approach for modeling and solving distributed, complex and dynamic problems. Sample applications notably include multiple spacecraft operations and maintenance, onboard-ground coordination, mission simulation, multi-mission operation, autonomous navigation, and collective robotics.</p>
-<p> AAMAS-related areas such as Engineering Multiagent Systems, Knowledge Representation, Reasoning, and Planning, Markets, Auctions, and Non-Cooperative Game Theory or Modelling and Simulation of Societies, develop relevant models and techniques to address such Space-related applications.</p>
-<!--p>Some topics that will be discussed during the workshops are:
-<ul>
-<li>Coordination, Organisations, Institutions, Norms and Ethics, for devising organisational models of more and more complex Space system of systems;
-<li>Engineering Multiagent Systems, for providing tools for programming agents in this context;
-<li>Knowledge Representation, Reasoning, and Planning, for providing methods to efficiently plan spacecraft and space assets activities;
-<li>Learning and Adaptation, for enabling assets to adapt to the high dynamic nature of the Space systems;
-<li>Markets, Auctions, and Non-Cooperative Game Theory, for providing tools to coordinate activities in market-based Newspace;
-<li>Modeling and Simulation of Societies, for assessing behavior and performance of systems to be deployed;
-<li>Social Choice and Cooperative Game Theory, for coordinating resource usage in more and more shared environments.
-</ul></p-->
-</div>
-</div>
-
-
-<div id="cfp" class="outline-2">
-<h2 id="header-cfp"><a id="id-cfp"></a><span class="section-number-2">2</span>Call for Papers</h2>
-<div class="outline-text-2" id="text-contents">
-	
-<div id="context" class="outline-3">
-<h3 id="header-context"><a id="id-context"></a>Workshop Context</h3>
-<div class="outline-text-3" id="text-context">
-<p>
-The workshop on Autonomous Agents and Multi-Agent Systems for Space Applications (MASSpace) aims to be a multidisciplinary meeting place to discuss the contributions of <b>autonomous agents and multi-agent systems to the space domain</b>. In deed, the Space domain is moving fast, and recent evolution tends to consider more and more complex and composite systems (e.g. larger constellations, multiple-mission federations, multi-user systems, heterogenous robotic systems), with stronger expectations, notably to perform more and more accurate environmental monitoring, complex requests, or richer exploration scenarios. In such context, agent-based and multi-agent systems appear to provide relevant paradigms to answer to these expectations. </p>
-<p>In recent years, several papers applying AAMAS models and techniques to Space domain have been published in AAMAS and other venues which strongly advocates for organizing an event on the cross-fertilization of AAMAS and Space, as (i) to provide Space domain experts with the means to use these multi-agent models and techniques, and (ii) to challenge multi-agents models and techniques with novel problems coming from the Space domain. Thus, any AAMAS attendee could find interest in participating to the workshop, due to the broad scope of relevant AAMAS-related topics.
-</p>
-</div>
-</div>
-<div id="topics" class="outline-3">
-<h3 id="header-topics"><a id="id-topics"></a>Topics</h3>
-<div class="outline-text-3" id="text-topics">
-<p>Since the early years of AAMAS, Space have been identified as a very relevant and challenging application domain, and today, with the ever growing size and complexity of Space missions and their environment (e.g. NewSpace), all AAMAS topics and techniques (see <a href="https://www.aamas2024-conference.auckland.ac.nz/calls/call-for-papers/">AAMAS call for papers</a>) have becoming even more relevant to address this innovative and challenging topics, such as (but not limited to):
-</p>
-<ul style="font-size:100%;">
-	<li><em>Organizations and institutions</em> to model Space Systems</li>
-	<li><em>Policy, regulation, sanctions, accountability and legislation</em> for Space Systems, especially New Space Applications</li> 
-	<li><em>Trust and reputation</em> in Space Systems</li>
-	<li><em>Architecture and modelling</em> for Space Applications</li>
-	<li><em>Formal verification and validation</em> of agent-based Space Systems</li>
-	<li><em>Programming models and languages</em> to develop agent-based Space Applications</li>
-	<li><em>Human-agent interaction</em> especially in Space environment and constraints</li>	
-        <li><em>Distributed problem solving</em> to efficiently coordinate decisions made by space assets and actors</li>
-	<li><em>Coalition formation</em> to coordinate multiple missions and systems</li>
-	<li><em>Single-agent and multi-agent planning and scheduling</em> to determine plans to be performed by missions</li>
-	<li><em>Reasoning and learning under uncertainty</em> to devise robust plans and behaviors</li>
-	<li><em>Machine learning and deep learning</em> to adapt systems and agents behaviors</li>
-	<li><em>Auctions and Mechanism Design</em> to coordinate resource allocation in Space Systems</li>
-	<li><em>Interactive simulation</em> to assess Space Systems in realistic but simulated settings</li>
-	<li><em>Simulation of complex systems</em> such as Space Systems</li>
-	<li><em>Fair Allocation</em> of Space assets between multiple stakeholders</li>	
-	<li><em>Single- and Multi-agent Reinforcement Learning</em> to learn collective behaviors</li>
-	<li><em>RL in partially observable settings</em> to handle uncontrolled environments</li>
-	<li><em>Safe, Robust, Explainable RL</em> to provide strong guarantees on learning agents</li>
-	<li><em>Multi-robot coordination and collaboration </em> for Observation and Exploration missions</li>
-    <!--li><em>Coordination, Organisations, Institutions, Norms and Ethics</em>, for devising organisational models of more and more complex Space system of systems;</li>
-    <li> <em>Engineering Multiagent Systems</em>, for providing tools for programming agents in this context;
-    </li>
-    <li> <em>Knowledge Representation, Reasoning, and Planning</em>, for providing methods to efficiently plan spacecraft and space assets activities;
-    </li>
-    <li><em>Distributed Problem Solving and Optimization</em>, to efficiently coordinate distributed decisions made by space assets and actors;</li>    
-    <li> <em>Learning and Adaptation</em>, for enabling assets to adapt to the high dynamic nature of the Space systems;
-    </li>
-    <li> <em>Markets, Auctions, and Non-Cooperative Game Theory</em>, for providing tools to coordinate activities in market-based Newspace;
-    </li>
-    <li> <em>Modeling and Simulation of Societies</em>, for assessing behavior and performance of systems to be deployed;
-    </li>
-	<li><em>Social Choice and Cooperative Game Theory</em>, for coordinating resource usage in more and more shared environments.</li-->
-</ul>	
-<p>The workshop welcomes submissions addressing any such topics applied to any Space-related application or used case, ranging from ground operations to deep space observation and exploration.</p>
-	
-</div>
-</div>
-</div>
-</div>
-
-<div id="dates" class="outline-2">
-<h2 id="header-dates"><a id="id-dates"></a><span class="section-number-2">3</span> Important Dates</h2>
-<div class="outline-text-2" id="text-dates">
-<p>
-<ul>
-<li>Submission of contributions to workshops: <span style="color: #ff0000">February 23, 2024</span>&nbsp;<s>February 5, 2024</s></li>
-<li>Paper acceptance notification: <span style="color: #ff0000">March 19, 2024</span>&nbsp;<s>March 4, 2024</s></li>
-<li>Call for participation: March 19, 2024</li>
-<li>Workshop: May 7, 2024</li>
-</ul>
-</p>
-</div>
-</div>
-
-<div id="instructions" class="outline-2">
-<h2 id="header-instructions"><a id="id-instructions"></a><span class="section-number-2">4</span> Submission Instructions</h2>
-<div class="outline-text-2" id="text-instructions">
-<p>
-Submission URL: <a href="https://cmt3.research.microsoft.com/MASSpace2024/">https://cmt3.research.microsoft.com/MASSpace2024/</a>
-</p>
-<h3>Submission Types</h3>
-<ul>
-	<li><b>Technical Papers</b>: Full-length research papers of up to 8 pages (excluding references and appendices) detailing high quality work in progress or work that could potentially be published at a major conference.</li>
-	<li><b>Short Papers</b>: Position or short papers of up to 4 pages (excluding references and appendices) that describe initial work or the release of privacy-preserving benchmarks and datasets on the topics of interest.</li>
-</ul>
-
-<p>All papers must be submitted in PDF format, using the <a href="https://www.aamas2024-conference.auckland.ac.nz/files/2023/09/AAMAS-2024-Formatting-Instructions-CCBY.zip">AAMAS-24 author kit</a>. Submissions should include the name(s), affiliations, and email addresses of all authors. </p>
-<p>Submissions will be refereed on the basis of technical quality, novelty, significance, and clarity. Each submission will be thoroughly reviewed by at least two program committee members. </p>
-</div>
-</div>
-	
-<div id="programme" class="outline-2">
-<h2 id="header-programme"><a id="id-programme"></a><span class="section-number-2">5</span> Programme</h2>
-<div class="outline-text-2" id="text-programme">
-<!--p>
-&#128679; In progress... &#128679;</p-->
-<!--ul>
-	<li>0855-0900 — Introductory remarks (Steve Chien, Gauthier Picard</li>
-	<li>0900-1000 — <a href="#invited">Invited talk (Federico Rossi)</a></li>
-	<li>1000-1030 — Coffee break</li>
-	<li>1030-1230 — Session 1
-		<ul>
-			<li>1030-1055 — <i>Lunar Leader: Persistent, Optimal Leader Election for Multi-Agent Exploration Teams</i>, Keenan Albee (NASA Jet Propulsion Laboratory), Sriramya Bhamidipati (NASA Jet Propulsion Laboratory), Joshua Vander Hook (Outrider, Inc.), Federico Rossi (Jet Propulsion Laboratory - California Institute of Technology)</li>
-			<li>1055-1120 — <i>CADRE MoonDB: Distributed Database for Multi-Robot Information-Sharing and Map-Merging for Lunar Exploration</i>, Maíra Saboia (Jet Propulsion Laboratory - California Institute of Technology), Federico Rossi (Jet Propulsion Laboratory - California Institute of Technology), Viet Nguyen (Jet Propulsion Laboratory - California Institute of Technology), Grace Lim (Jet Propulsion Laboratory - California Institute of Technology), Dustin Aguilar (Jet Propulsion Laboratory - California Institute of Technology), Jean-Pierre de la Croix (Jet Propulsion Laboratory - California Institute of Technology)</li>
-			<li>1130-1155 — <i>DRIFT: Deep Reinforcement Learning for Intelligent Floating Platforms Trajectories</i>, Matteo El Hariry (University of Luxembourg), Antoine Richard (University of Luxembourg), Vivek Muralidharan (University of Luxembourg), Matthieu Geist (Cohere), Miguel Olivares (Universidad de Luxemburgo)</li>
-			<li>1155-1220 — <i>Integrated Modeling and Planning for On-Orbit Assembly of Large Space Structures with Mobile Crawling Robots</i>, Alexandre Albore (ONERA), Mathieu Rognant (ONERA)</li>		
-		</ul>
-	</li>
-	<li>1230-1400 — Lunch break</li>
-	<li>1400-1515 — Session 2
-		<ul>
-			<li>1400-1425 — <i>Going Beyond Mono-Mission Earth Observation: Using the Multi-Agent Paradigm to Federate Multiple Missions</i>, Jean-Loup Farges (ONERA), Filipo S. Perotto (ONERA), Gauthier Picard (ONERA), Cedric Pralet (ONERA), Cyrille De Lucy (Airbus Defence and Space), Jonathan Guerra (Airbus Defence and Space), Philippe Pavero (Airbus Defence and Space), Fabrice Planchou (Airbus Defence and Space)</li>
-			<li>1425-1450 — <i>Hierarchical Temporal Planning in an Earth Observation Satellite Software Architecture</i>, Alexandre Albore (ONERA), Rafael Bailon-Ruiz (ONERA)</li>
-			<li>1450-1515 — <i>Understanding Drill Data for Autonomous Application</i>, Sarah E. Boelter (University of Minnesota), Ebasa G. Temesgen (UMN), Brian Glass (NASA Ames Research Center), Maria Gini (University of Minnesota)</li>
-		</ul>
-	</li>
-	<li>1515-1530 — Closing remarks</li>
-</ul-->
-
-<div id="detailed" class="outline-3">
-<h3 id="header-detailed">Schedule</h3>
-<div class="outline-text-3" id="text-detailed">
-<p>
-	<table style="width:100%;empty-cells:show;">
-	<tr>
-		<td>0855-0900</td>
-		<td>&nbsp;</td>
-		<td>Introductory remarks</td>
-		<td>Steve Chien, Gauthier Picard</td>
-	</tr>
-	<tr>
-		<td>0900-1000</td>
-		<td>&nbsp;</td>
-		<td><a href="#invited">Invited talk</a></td>
-		<td>Federico Rossi</td>
-	</tr>
-	<tr>
-		<td>1000-1030</td>
-		<td>&nbsp;</td>
-		<td>Coffee break</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>1030-1230</td>
-		<td>&nbsp;</td>
-		<td>Session 1</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>1030-1055</td>
-		<td><i>Lunar Leader: Persistent, Optimal Leader Election for Multi-Agent Exploration Teams</i></td>
-		<td>Keenan Albee (NASA Jet Propulsion Laboratory), Sriramya Bhamidipati (NASA Jet Propulsion Laboratory), Joshua Vander Hook (Outrider, Inc.), Federico Rossi (Jet Propulsion Laboratory - California Institute of Technology)</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>1055-1120</td>
-		<td><i>CADRE MoonDB: Distributed Database for Multi-Robot Information-Sharing and Map-Merging for Lunar Exploration</i></td>
-		<td>Maíra Saboia (Jet Propulsion Laboratory - California Institute of Technology), Federico Rossi (Jet Propulsion Laboratory - California Institute of Technology), Viet Nguyen (Jet Propulsion Laboratory - California Institute of Technology), Grace Lim (Jet Propulsion Laboratory - California Institute of Technology), Dustin Aguilar (Jet Propulsion Laboratory - California Institute of Technology), Jean-Pierre de la Croix (Jet Propulsion Laboratory - California Institute of Technology)</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>1130-1155</td>
-		<td><i>DRIFT: Deep Reinforcement Learning for Intelligent Floating Platforms Trajectories</i></td>
-		<td>Matteo El Hariry (University of Luxembourg), Antoine Richard (University of Luxembourg), Vivek Muralidharan (University of Luxembourg), Matthieu Geist (Cohere), Miguel Olivares (Universidad de Luxemburg)</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>1155-1220</td>
-		<td><i>Integrated Modeling and Planning for On-Orbit Assembly of Large Space Structures with Mobile Crawling Robots</i></td>
-		<td>Alexandre Albore (ONERA), Mathieu Rognant (ONERA)</td>		
-	</tr>
-	<tr>
-		<td>1230-1400</td>
-		<td>&nbsp;</td>
-		<td>Lunch break</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>1400-1515</td>
-		<td>&nbsp;</td>
-		<td>Session 2</td>
-		<td>&nbsp;</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>1400-1425</td>
-		<td><i>Going Beyond Mono-Mission Earth Observation: Using the Multi-Agent Paradigm to Federate Multiple Missions</i></td>
-		<td>Jean-Loup Farges (ONERA), Filipo S. Perotto (ONERA), Gauthier Picard (ONERA), Cedric Pralet (ONERA), Cyrille De Lucy (Airbus Defence and Space), Jonathan Guerra (Airbus Defence and Space), Philippe Pavero (Airbus Defence and Space), Fabrice Planchou (Airbus Defence and Space)</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>1425-1450</td>
-		<td><i>Hierarchical Temporal Planning in an Earth Observation Satellite Software Architecture</i></td>
-		<td>Alexandre Albore (ONERA), Rafael Bailon-Ruiz (ONERA)</td>
-	</tr>
-	<tr>
-		<td>&nbsp;</td>
-		<td>1450-1515</td>
-		<td><i>Understanding Drill Data for Autonomous Application</i></td>
-		<td>Sarah E. Boelter (University of Minnesota), Ebasa G. Temesgen (UMN), Brian Glass (NASA Ames Research Center), Maria Gini (University of Minnesota)</td>
-	</tr>
-	<tr>
-		<td>1515-1530</td>
-		<td>&nbsp;</td>
-		<td>Closing remarks</td>
-		<td>Gauthier Picard</td>
-	</tr>
-</table>
-</p>
-</div>
-
-	<!--div id="accepted" class="outline-3">
-<h3 id="header-accepted"><a id="id-accepter"></a>Accepted papers</h3>
-<div class="outline-text-3" id="text-accepted">
-	<ul>
-		<li><i>Hierarchical Temporal Planning in an Earth Observation Satellite Software Architecture</i>, Alexandre Albore (ONERA), Rafael Bailon-Ruiz (ONERA)</li>
-		<li><i>Lunar Leader: Persistent, Optimal Leader Election for Multi-Agent Exploration Teams</i>, Keenan Albee (NASA Jet Propulsion Laboratory), Sriramya Bhamidipati (NASA Jet Propulsion Laboratory), Joshua Vander Hook (Outrider, Inc.), Federico Rossi (Jet Propulsion Laboratory - California Institute of Technology)</li>
-		<li><i>CADRE MoonDB: Distributed Database for Multi-Robot Information-Sharing and Map-Merging for Lunar Exploration</i>, Maíra Saboia (Jet Propulsion Laboratory - California Institute of Technology), Federico Rossi (Jet Propulsion Laboratory - California Institute of Technology), Viet Nguyen (Jet Propulsion Laboratory - California Institute of Technology), Grace Lim (Jet Propulsion Laboratory - California Institute of Technology), Dustin Aguilar (Jet Propulsion Laboratory - California Institute of Technology), Jean-Pierre de la Croix (Jet Propulsion Laboratory - California Institute of Technology)</li>
-		<li><i>Understanding Drill Data for Autonomous Application</i>, Sarah E. Boelter (University of Minnesota), Ebasa G. Temesgen (UMN), Brian Glass (NASA Ames Research Center), Maria Gini (University of Minnesota)</li>
-		<li><i>Integrated Modeling and Planning for On-Orbit Assembly of Large Space Structures with Mobile Crawling Robots</i>, Alexandre Albore (ONERA), Mathieu Rognant (ONERA)</li>
-		<li><i>DRIFT: Deep Reinforcement Learning for Intelligent Floating Platforms Trajectories</i>, Matteo El Hariry (University of Luxembourg), Antoine Richard (University of Luxembourg), Vivek Muralidharan (University of Luxembourg), Matthieu Geist (Cohere), Miguel Olivares (Universidad de Luxemburgo)</li>
-		<li><i>Going Beyond Mono-Mission Earth Observation: Using the Multi-Agent Paradigm to Federate Multiple Missions</i>, Jean-Loup Farges (ONERA), Filipo S. Perotto (ONERA), Gauthier Picard (ONERA), Cedric Pralet (ONERA), Cyrille De Lucy (Airbus Defence and Space), Jonathan Guerra (Airbus Defence and Space), Philippe Pavero (Airbus Defence and Space), Fabrice Planchou (Airbus Defence and Space)</li>
-	</ul>
-
-</div>
-</div-->
+            <p>This workshop aims at disseminating and sharing recent advances in the use of agent-based and
+                multi-agent-based models and techniques in the Space domain. Indeed, the use of agent-based and
+                multi-agent systems (MAS) in aerospace and space is gaining traction, as they offer a promising approach
+                for modeling and solving distributed, complex and dynamic problems. Sample applications notably include
+                multiple spacecraft operations and maintenance, onboard-ground coordination, mission simulation,
+                multi-mission operation, autonomous navigation, and collective robotics.</p>
+            <p> AAMAS-related areas such as Engineering Multiagent Systems, Knowledge Representation, Reasoning, and
+                Planning, Markets, Auctions, and Non-Cooperative Game Theory or Modelling and Simulation of Societies,
+                develop relevant models and techniques to address such Space-related applications.</p>
+            <!--p>Some topics that will be discussed during the workshops are:
+            <ul>
+            <li>Coordination, Organisations, Institutions, Norms and Ethics, for devising organisational models of more and more complex Space system of systems;
+            <li>Engineering Multiagent Systems, for providing tools for programming agents in this context;
+            <li>Knowledge Representation, Reasoning, and Planning, for providing methods to efficiently plan spacecraft and space assets activities;
+            <li>Learning and Adaptation, for enabling assets to adapt to the high dynamic nature of the Space systems;
+            <li>Markets, Auctions, and Non-Cooperative Game Theory, for providing tools to coordinate activities in market-based Newspace;
+            <li>Modeling and Simulation of Societies, for assessing behavior and performance of systems to be deployed;
+            <li>Social Choice and Cooperative Game Theory, for coordinating resource usage in more and more shared environments.
+            </ul></p-->
+        </div>
+    </div>
 
 
-	
-<div id="invited" class="outline-3">
-<h3 id="header-invited"><a id="id-invited"></a>Invited Speaker: <a href="https://www.federico.io/">Federico Rossi</a>, NASA JPL, USA</h3>
-<div class="outline-text-3" id="text-invited">
-<p>
-<b>Title</b>: Multi-agent autonomy on the Moon: NASA' Coordinated Autonomous Distributed Robotics Explorers (CADRE) mission
-</p>
-	<p><b>Abstract</b>: This talk will present the multi-agent autonomy architecture of NASA's Cooperative Autonomous Distributed Robotic Explorers (CADRE) mission, a technology demonstration that will deliver a team of autonomous rovers to the Moon's Reiner Gamma region in the coming year. Multi-robot systems hold great promise to address a number of key questions in planetary science. They can observe phenomena of interest from multiple, geographically-distributed locations at the same time; produced detailed three-dimensional images of the subsurface through seismic and RADAR surveys; and offer increased resilience compared to monolithic explorers, enabling bolder exploration. Autonomy is a key enabling technology for these multi-robot systems: it allows agents to operate together as a team, building on each other's abilities, with no humans in the loop, a critical capability when light-speed delays and low bandwidth make teleoperation infeasible or inefficient. But how do we design, build, test, and fly algorithms for a team of autonomous robots? How should the robots decide who (if any) should be in charge; when they should drive, and when they should recharge; how to explore an unknown region together; and how to collect measurements in formation? In this talk, we will walk through CADRE's autonomy stack, explore the trade-offs that informed the design of its multi-agent autonomy architecture, and end by speculating about the future of multi-robot systems for planetary exploration.
-	</p>
-	<p>
-		<p><b>Bio</b>: Dr. Federico Rossi is a Robotics Technologist with the Multi-Agent Autonomy Group within the Robotics section of NASA’s Jet Propulsion Laboratory.
+    <div id="cfp" class="outline-2">
+        <h2 id="header-cfp"><a id="id-cfp"></a><span class="section-number-2">2</span>Call for Papers</h2>
+        <div class="outline-text-2" id="text-contents">
 
-At JPL, he led the multi-agent autonomy team for NASA' Coordinated Autonomous Distributed Robotics Explorers (CADRE) mission, which will deliver a team of three autonomous rovers to the Moon's Reiner Gamma region in the coming year.
+            <div id="context" class="outline-3">
+                <h3 id="header-context"><a id="id-context"></a>Workshop Context</h3>
+                <div class="outline-text-3" id="text-context">
+                    <p>
+                        The workshop on Autonomous Agents and Multi-Agent Systems for Space Applications (MASSpace) aims
+                        to be a multidisciplinary meeting place to discuss the contributions of <b>autonomous agents and
+                        multi-agent systems to the space domain</b>. In deed, the Space domain is moving fast, and
+                        recent evolution tends to consider more and more complex and composite systems (e.g. larger
+                        constellations, multiple-mission federations, multi-user systems, heterogenous robotic systems),
+                        with stronger expectations, notably to perform more and more accurate environmental monitoring,
+                        complex requests, or richer exploration scenarios. In such context, agent-based and multi-agent
+                        systems appear to provide relevant paradigms to answer to these expectations. </p>
+                    <p>In recent years, several papers applying AAMAS models and techniques to Space domain have been
+                        published in AAMAS and other venues which strongly advocates for organizing an event on the
+                        cross-fertilization of AAMAS and Space, as (i) to provide Space domain experts with the means to
+                        use these multi-agent models and techniques, and (ii) to challenge multi-agents models and
+                        techniques with novel problems coming from the Space domain. Thus, any AAMAS attendee could find
+                        interest in participating to the workshop, due to the broad scope of relevant AAMAS-related
+                        topics.
+                    </p>
+                </div>
+            </div>
+            <div id="topics" class="outline-3">
+                <h3 id="header-topics"><a id="id-topics"></a>Topics</h3>
+                <div class="outline-text-3" id="text-topics">
+                    <p>Since the early years of AAMAS, Space have been identified as a very relevant and challenging
+                        application domain, and today, with the ever growing size and complexity of Space missions and
+                        their environment (e.g. NewSpace), all AAMAS topics and techniques (see <a
+                                href="https://www.aamas2024-conference.auckland.ac.nz/calls/call-for-papers/">AAMAS call
+                            for papers</a>) have becoming even more relevant to address this innovative and challenging
+                        topics, such as (but not limited to):
+                    </p>
+                    <ul style="font-size:100%;">
+                        <li><em>Organizations and institutions</em> to model Space Systems</li>
+                        <li><em>Policy, regulation, sanctions, accountability and legislation</em> for Space Systems,
+                            especially New Space Applications
+                        </li>
+                        <li><em>Trust and reputation</em> in Space Systems</li>
+                        <li><em>Architecture and modelling</em> for Space Applications</li>
+                        <li><em>Formal verification and validation</em> of agent-based Space Systems</li>
+                        <li><em>Programming models and languages</em> to develop agent-based Space Applications</li>
+                        <li><em>Human-agent interaction</em> especially in Space environment and constraints</li>
+                        <li><em>Distributed problem solving</em> to efficiently coordinate decisions made by space
+                            assets and actors
+                        </li>
+                        <li><em>Coalition formation</em> to coordinate multiple missions and systems</li>
+                        <li><em>Single-agent and multi-agent planning and scheduling</em> to determine plans to be
+                            performed by missions
+                        </li>
+                        <li><em>Reasoning and learning under uncertainty</em> to devise robust plans and behaviors</li>
+                        <li><em>Machine learning and deep learning</em> to adapt systems and agents behaviors</li>
+                        <li><em>Auctions and Mechanism Design</em> to coordinate resource allocation in Space Systems
+                        </li>
+                        <li><em>Interactive simulation</em> to assess Space Systems in realistic but simulated settings
+                        </li>
+                        <li><em>Simulation of complex systems</em> such as Space Systems</li>
+                        <li><em>Fair Allocation</em> of Space assets between multiple stakeholders</li>
+                        <li><em>Single- and Multi-agent Reinforcement Learning</em> to learn collective behaviors</li>
+                        <li><em>RL in partially observable settings</em> to handle uncontrolled environments</li>
+                        <li><em>Safe, Robust, Explainable RL</em> to provide strong guarantees on learning agents</li>
+                        <li><em>Multi-robot coordination and collaboration </em> for Observation and Exploration
+                            missions
+                        </li>
+                        <!--li><em>Coordination, Organisations, Institutions, Norms and Ethics</em>, for devising organisational models of more and more complex Space system of systems;</li>
+                        <li> <em>Engineering Multiagent Systems</em>, for providing tools for programming agents in this context;
+                        </li>
+                        <li> <em>Knowledge Representation, Reasoning, and Planning</em>, for providing methods to efficiently plan spacecraft and space assets activities;
+                        </li>
+                        <li><em>Distributed Problem Solving and Optimization</em>, to efficiently coordinate distributed decisions made by space assets and actors;</li>    
+                        <li> <em>Learning and Adaptation</em>, for enabling assets to adapt to the high dynamic nature of the Space systems;
+                        </li>
+                        <li> <em>Markets, Auctions, and Non-Cooperative Game Theory</em>, for providing tools to coordinate activities in market-based Newspace;
+                        </li>
+                        <li> <em>Modeling and Simulation of Societies</em>, for assessing behavior and performance of systems to be deployed;
+                        </li>
+                        <li><em>Social Choice and Cooperative Game Theory</em>, for coordinating resource usage in more and more shared environments.</li-->
+                    </ul>
+                    <p>The workshop welcomes submissions addressing any such topics applied to any Space-related
+                        application or used case, ranging from ground operations to deep space observation and
+                        exploration.</p>
 
-Dr. Rossi received a Ph.D. in Aeronautics and Astronautics at Stanford University under the guidance of Prof. Marco Pavone in 2018, and M.Sc. in Space Engineering from Politecnico di Milano in 2013.
+                </div>
+            </div>
+        </div>
+    </div>
 
-His research focuses on decision-making under uncertainty in multi-agent robotic systems and operations of autonomous agents, with applications to planetary exploration and Earth science. At JPL, he has developed autonomy technologies for cooperative robotic exploration, joint orbit and observation optimization for exploration of small bodies, and under-ice navigation in Antarctica.
-	</p>
-</div>
-</div>
-	
-</div>
+    <div id="dates" class="outline-2">
+        <h2 id="header-dates"><a id="id-dates"></a><span class="section-number-2">3</span> Important Dates</h2>
+        <div class="outline-text-2" id="text-dates">
+            <p>
+            <ul>
+                <li>Submission of contributions to workshops: <span style="color: #ff0000">February 23, 2024</span>&nbsp;<s>February
+                    5, 2024</s></li>
+                <li>Paper acceptance notification: <span style="color: #ff0000">March 19, 2024</span>&nbsp;<s>March 4,
+                    2024</s></li>
+                <li>Call for participation: March 19, 2024</li>
+                <li>Workshop: May 7, 2024</li>
+            </ul>
+            </p>
+        </div>
+    </div>
 
-<div id="committees" class="outline-2">
-<h2 id="header-committees"><a id="id-committees"></a><span class="section-number-2">6</span> Committees</h2>
-<div class="outline-text-2" id="text-committees">
-</div>
+    <div id="instructions" class="outline-2">
+        <h2 id="header-instructions"><a id="id-instructions"></a><span class="section-number-2">4</span> Submission
+            Instructions</h2>
+        <div class="outline-text-2" id="text-instructions">
+            <p>
+                Submission URL: <a href="https://cmt3.research.microsoft.com/MASSpace2024/">https://cmt3.research.microsoft.com/MASSpace2024/</a>
+            </p>
+            <h3>Submission Types</h3>
+            <ul>
+                <li><b>Technical Papers</b>: Full-length research papers of up to 8 pages (excluding references and
+                    appendices) detailing high quality work in progress or work that could potentially be published at a
+                    major conference.
+                </li>
+                <li><b>Short Papers</b>: Position or short papers of up to 4 pages (excluding references and appendices)
+                    that describe initial work or the release of privacy-preserving benchmarks and datasets on the
+                    topics of interest.
+                </li>
+            </ul>
 
-<div id="organizers" class="outline-3">
-<h3 id="header-organizers"><a id="id-organizers"></a>Chairs</h3>
-<div class="outline-text-3" id="text-organizers">
-<p>
-<ul>
-<li><a href="https://ai.jpl.nasa.gov/public/people/chien/">Steve Chien</a>, NASA JPL, USA</li>
-<li><a href="https://www.gauthier-picard.info/">Gauthier Picard</a>, ONERA, France</li>
-</ul>
-</p>
-</div>
-</div>
+            <p>All papers must be submitted in PDF format, using the <a
+                    href="https://www.aamas2024-conference.auckland.ac.nz/files/2023/09/AAMAS-2024-Formatting-Instructions-CCBY.zip">AAMAS-24
+                author kit</a>. Submissions should include the name(s), affiliations, and email addresses of all
+                authors. </p>
+            <p>Submissions will be refereed on the basis of technical quality, novelty, significance, and clarity. Each
+                submission will be thoroughly reviewed by at least two program committee members. </p>
+        </div>
+    </div>
 
-<div id="co-chairs" class="outline-3">
-<h3 id="header-co-chairs"><a id="id-co-chairs"></a>Co-Chair</h3>
-<div class="outline-text-3" id="text-co-chairs">
-<p>
-<ul>
-<li><a href="https://ai.jpl.nasa.gov/public/people/itai/">Itai Zilberstein</a>, NASA JPL, USA</li>
-</ul>
-</p>
-</div>
-</div>
+    <div id="programme" class="outline-2">
+        <h2 id="header-programme"><a id="id-programme"></a><span class="section-number-2">5</span> Programme</h2>
+        <div class="outline-text-2" id="text-programme">
+            <!--p>
+            &#128679; In progress... &#128679;</p-->
+            <!--ul>
+                <li>0855-0900 — Introductory remarks (Steve Chien, Gauthier Picard</li>
+                <li>0900-1000 — <a href="#invited">Invited talk (Federico Rossi)</a></li>
+                <li>1000-1030 — Coffee break</li>
+                <li>1030-1230 — Session 1
+                    <ul>
+                        <li>1030-1055 — <i>Lunar Leader: Persistent, Optimal Leader Election for Multi-Agent Exploration Teams</i>, Keenan Albee (NASA Jet Propulsion Laboratory), Sriramya Bhamidipati (NASA Jet Propulsion Laboratory), Joshua Vander Hook (Outrider, Inc.), Federico Rossi (Jet Propulsion Laboratory - California Institute of Technology)</li>
+                        <li>1055-1120 — <i>CADRE MoonDB: Distributed Database for Multi-Robot Information-Sharing and Map-Merging for Lunar Exploration</i>, Maíra Saboia (Jet Propulsion Laboratory - California Institute of Technology), Federico Rossi (Jet Propulsion Laboratory - California Institute of Technology), Viet Nguyen (Jet Propulsion Laboratory - California Institute of Technology), Grace Lim (Jet Propulsion Laboratory - California Institute of Technology), Dustin Aguilar (Jet Propulsion Laboratory - California Institute of Technology), Jean-Pierre de la Croix (Jet Propulsion Laboratory - California Institute of Technology)</li>
+                        <li>1130-1155 — <i>DRIFT: Deep Reinforcement Learning for Intelligent Floating Platforms Trajectories</i>, Matteo El Hariry (University of Luxembourg), Antoine Richard (University of Luxembourg), Vivek Muralidharan (University of Luxembourg), Matthieu Geist (Cohere), Miguel Olivares (Universidad de Luxemburgo)</li>
+                        <li>1155-1220 — <i>Integrated Modeling and Planning for On-Orbit Assembly of Large Space Structures with Mobile Crawling Robots</i>, Alexandre Albore (ONERA), Mathieu Rognant (ONERA)</li>		
+                    </ul>
+                </li>
+                <li>1230-1400 — Lunch break</li>
+                <li>1400-1515 — Session 2
+                    <ul>
+                        <li>1400-1425 — <i>Going Beyond Mono-Mission Earth Observation: Using the Multi-Agent Paradigm to Federate Multiple Missions</i>, Jean-Loup Farges (ONERA), Filipo S. Perotto (ONERA), Gauthier Picard (ONERA), Cedric Pralet (ONERA), Cyrille De Lucy (Airbus Defence and Space), Jonathan Guerra (Airbus Defence and Space), Philippe Pavero (Airbus Defence and Space), Fabrice Planchou (Airbus Defence and Space)</li>
+                        <li>1425-1450 — <i>Hierarchical Temporal Planning in an Earth Observation Satellite Software Architecture</i>, Alexandre Albore (ONERA), Rafael Bailon-Ruiz (ONERA)</li>
+                        <li>1450-1515 — <i>Understanding Drill Data for Autonomous Application</i>, Sarah E. Boelter (University of Minnesota), Ebasa G. Temesgen (UMN), Brian Glass (NASA Ames Research Center), Maria Gini (University of Minnesota)</li>
+                    </ul>
+                </li>
+                <li>1515-1530 — Closing remarks</li>
+            </ul-->
 
-<div id="pc" class="outline-3">
-<h3 id="header-pc"><a id="id-pc"></a>Programme Committee</h3>
-<div class="outline-text-3" id="text-pc">
-<p>
-	<ul>
-		<li>Simone Fratini, Solenix, Germany</li>
-		<li>Tal Grinshpoun, Ariel University, Israel</li>
-		<li>Jonathan Guerra, Airbus Defence and Space, France</li>
-		<li>Elsy Kaddoum, University of Toulouse, France</li>
-		<li>Cédric Pralet, ONERA, France</li>
-		<li>Stéphanie Roussel, ONERA, France</li>
-		<li>Caleb Wagner, NASA JPL, USA</li>
-	</ul>
-</p>
-</div>
-</div>
+            <div id="detailed" class="outline-3">
+                <h3 id="header-detailed">Schedule</h3>
+                <div class="outline-text-3" id="text-detailed">
+                    <p>
+                    <table style="width:100%;empty-cells:show;">
+                        <tr>
+                            <td>0855-0900</td>
+                            <td>&nbsp;</td>
+                            <td>Introductory remarks</td>
+                            <td>Steve Chien, Gauthier Picard</td>
+                        </tr>
+                        <tr>
+                            <td>0900-1000</td>
+                            <td>&nbsp;</td>
+                            <td><a href="#invited">Invited talk</a></td>
+                            <td>Federico Rossi</td>
+                        </tr>
+                        <tr>
+                            <td>1000-1030</td>
+                            <td>&nbsp;</td>
+                            <td>Coffee break</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>1030-1230</td>
+                            <td>&nbsp;</td>
+                            <td>Session 1</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>1030-1055</td>
+                            <td><i>Lunar Leader: Persistent, Optimal Leader Election for Multi-Agent Exploration
+                                Teams</i></td>
+                            <td>Keenan Albee (NASA Jet Propulsion Laboratory), Sriramya Bhamidipati (NASA Jet Propulsion
+                                Laboratory), Joshua Vander Hook (Outrider, Inc.), Federico Rossi (Jet Propulsion
+                                Laboratory - California Institute of Technology)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>1055-1120</td>
+                            <td><i>CADRE MoonDB: Distributed Database for Multi-Robot Information-Sharing and
+                                Map-Merging for Lunar Exploration</i></td>
+                            <td>Maíra Saboia (Jet Propulsion Laboratory - California Institute of Technology), Federico
+                                Rossi (Jet Propulsion Laboratory - California Institute of Technology), Viet Nguyen (Jet
+                                Propulsion Laboratory - California Institute of Technology), Grace Lim (Jet Propulsion
+                                Laboratory - California Institute of Technology), Dustin Aguilar (Jet Propulsion
+                                Laboratory - California Institute of Technology), Jean-Pierre de la Croix (Jet
+                                Propulsion Laboratory - California Institute of Technology)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>1130-1155</td>
+                            <td><i>DRIFT: Deep Reinforcement Learning for Intelligent Floating Platforms
+                                Trajectories</i></td>
+                            <td>Matteo El Hariry (University of Luxembourg), Antoine Richard (University of Luxembourg),
+                                Vivek Muralidharan (University of Luxembourg), Matthieu Geist (Cohere), Miguel Olivares
+                                (Universidad de Luxemburg)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>1155-1220</td>
+                            <td><i>Integrated Modeling and Planning for On-Orbit Assembly of Large Space Structures with
+                                Mobile Crawling Robots</i></td>
+                            <td>Alexandre Albore (ONERA), Mathieu Rognant (ONERA)</td>
+                        </tr>
+                        <tr>
+                            <td>1230-1400</td>
+                            <td>&nbsp;</td>
+                            <td>Lunch break</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>1400-1515</td>
+                            <td>&nbsp;</td>
+                            <td>Session 2</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>1400-1425</td>
+                            <td><i>Going Beyond Mono-Mission Earth Observation: Using the Multi-Agent Paradigm to
+                                Federate Multiple Missions</i></td>
+                            <td>Jean-Loup Farges (ONERA), Filipo S. Perotto (ONERA), Gauthier Picard (ONERA), Cedric
+                                Pralet (ONERA), Cyrille De Lucy (Airbus Defence and Space), Jonathan Guerra (Airbus
+                                Defence and Space), Philippe Pavero (Airbus Defence and Space), Fabrice Planchou (Airbus
+                                Defence and Space)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>1425-1450</td>
+                            <td><i>Hierarchical Temporal Planning in an Earth Observation Satellite Software
+                                Architecture</i></td>
+                            <td>Alexandre Albore (ONERA), Rafael Bailon-Ruiz (ONERA)</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>1450-1515</td>
+                            <td><i>Understanding Drill Data for Autonomous Application</i></td>
+                            <td>Sarah E. Boelter (University of Minnesota), Ebasa G. Temesgen (UMN), Brian Glass (NASA
+                                Ames Research Center), Maria Gini (University of Minnesota)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1515-1530</td>
+                            <td>&nbsp;</td>
+                            <td>Closing remarks</td>
+                            <td>Gauthier Picard</td>
+                        </tr>
+                    </table>
+                    </p>
+                </div>
+            </div>
 
-</div>
-<div id="postamble" class="status">
-<p class="author">Author: Gauthier Picard</p>
-<p class="email">Email: <a href="mailto:gauthier.picard@onera.fr">gauthier.picard@onera.fr</a></p>
-<script>
-	if (Date.parse(document.lastModified) != 0)
-    	document.write('<p class="date">Last modified: '
-                   + document.lastModified
-                   + '</p>');
-</script>
-<!--p class="date">Last modified: </p-->
-	
+            <!--div id="accepted" class="outline-3">
+        <h3 id="header-accepted"><a id="id-accepter"></a>Accepted papers</h3>
+        <div class="outline-text-3" id="text-accepted">
+            <ul>
+                <li><i>Hierarchical Temporal Planning in an Earth Observation Satellite Software Architecture</i>, Alexandre Albore (ONERA), Rafael Bailon-Ruiz (ONERA)</li>
+                <li><i>Lunar Leader: Persistent, Optimal Leader Election for Multi-Agent Exploration Teams</i>, Keenan Albee (NASA Jet Propulsion Laboratory), Sriramya Bhamidipati (NASA Jet Propulsion Laboratory), Joshua Vander Hook (Outrider, Inc.), Federico Rossi (Jet Propulsion Laboratory - California Institute of Technology)</li>
+                <li><i>CADRE MoonDB: Distributed Database for Multi-Robot Information-Sharing and Map-Merging for Lunar Exploration</i>, Maíra Saboia (Jet Propulsion Laboratory - California Institute of Technology), Federico Rossi (Jet Propulsion Laboratory - California Institute of Technology), Viet Nguyen (Jet Propulsion Laboratory - California Institute of Technology), Grace Lim (Jet Propulsion Laboratory - California Institute of Technology), Dustin Aguilar (Jet Propulsion Laboratory - California Institute of Technology), Jean-Pierre de la Croix (Jet Propulsion Laboratory - California Institute of Technology)</li>
+                <li><i>Understanding Drill Data for Autonomous Application</i>, Sarah E. Boelter (University of Minnesota), Ebasa G. Temesgen (UMN), Brian Glass (NASA Ames Research Center), Maria Gini (University of Minnesota)</li>
+                <li><i>Integrated Modeling and Planning for On-Orbit Assembly of Large Space Structures with Mobile Crawling Robots</i>, Alexandre Albore (ONERA), Mathieu Rognant (ONERA)</li>
+                <li><i>DRIFT: Deep Reinforcement Learning for Intelligent Floating Platforms Trajectories</i>, Matteo El Hariry (University of Luxembourg), Antoine Richard (University of Luxembourg), Vivek Muralidharan (University of Luxembourg), Matthieu Geist (Cohere), Miguel Olivares (Universidad de Luxemburgo)</li>
+                <li><i>Going Beyond Mono-Mission Earth Observation: Using the Multi-Agent Paradigm to Federate Multiple Missions</i>, Jean-Loup Farges (ONERA), Filipo S. Perotto (ONERA), Gauthier Picard (ONERA), Cedric Pralet (ONERA), Cyrille De Lucy (Airbus Defence and Space), Jonathan Guerra (Airbus Defence and Space), Philippe Pavero (Airbus Defence and Space), Fabrice Planchou (Airbus Defence and Space)</li>
+            </ul>
+        
+        </div>
+        </div-->
+
+
+            <div id="invited" class="outline-3">
+                <h3 id="header-invited"><a id="id-invited"></a>Invited Speaker: <a href="https://www.federico.io/">Federico
+                    Rossi</a>, NASA JPL, USA</h3>
+                <div class="outline-text-3" id="text-invited">
+                    <p>
+                        <b>Title</b>: Multi-agent autonomy on the Moon: NASA' Coordinated Autonomous Distributed
+                        Robotics Explorers (CADRE) mission
+                    </p>
+                    <p><b>Abstract</b>: This talk will present the multi-agent autonomy architecture of NASA's
+                        Cooperative Autonomous Distributed Robotic Explorers (CADRE) mission, a technology demonstration
+                        that will deliver a team of autonomous rovers to the Moon's Reiner Gamma region in the coming
+                        year. Multi-robot systems hold great promise to address a number of key questions in planetary
+                        science. They can observe phenomena of interest from multiple, geographically-distributed
+                        locations at the same time; produced detailed three-dimensional images of the subsurface through
+                        seismic and RADAR surveys; and offer increased resilience compared to monolithic explorers,
+                        enabling bolder exploration. Autonomy is a key enabling technology for these multi-robot
+                        systems: it allows agents to operate together as a team, building on each other's abilities,
+                        with no humans in the loop, a critical capability when light-speed delays and low bandwidth make
+                        teleoperation infeasible or inefficient. But how do we design, build, test, and fly algorithms
+                        for a team of autonomous robots? How should the robots decide who (if any) should be in charge;
+                        when they should drive, and when they should recharge; how to explore an unknown region
+                        together; and how to collect measurements in formation? In this talk, we will walk through
+                        CADRE's autonomy stack, explore the trade-offs that informed the design of its multi-agent
+                        autonomy architecture, and end by speculating about the future of multi-robot systems for
+                        planetary exploration.
+                    </p>
+                    <p>
+                    <p><b>Bio</b>: Dr. Federico Rossi is a Robotics Technologist with the Multi-Agent Autonomy Group
+                        within the Robotics section of NASA’s Jet Propulsion Laboratory.
+
+                        At JPL, he led the multi-agent autonomy team for NASA' Coordinated Autonomous Distributed
+                        Robotics Explorers (CADRE) mission, which will deliver a team of three autonomous rovers to the
+                        Moon's Reiner Gamma region in the coming year.
+
+                        Dr. Rossi received a Ph.D. in Aeronautics and Astronautics at Stanford University under the
+                        guidance of Prof. Marco Pavone in 2018, and M.Sc. in Space Engineering from Politecnico di
+                        Milano in 2013.
+
+                        His research focuses on decision-making under uncertainty in multi-agent robotic systems and
+                        operations of autonomous agents, with applications to planetary exploration and Earth science.
+                        At JPL, he has developed autonomy technologies for cooperative robotic exploration, joint orbit
+                        and observation optimization for exploration of small bodies, and under-ice navigation in
+                        Antarctica.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="committees" class="outline-2">
+        <h2 id="header-committees"><a id="id-committees"></a><span class="section-number-2">6</span> Committees</h2>
+        <div class="outline-text-2" id="text-committees">
+        </div>
+
+        <div id="organizers" class="outline-3">
+            <h3 id="header-organizers"><a id="id-organizers"></a>Chairs</h3>
+            <div class="outline-text-3" id="text-organizers">
+                <p>
+                <ul>
+                    <li><a href="https://ai.jpl.nasa.gov/public/people/chien/">Steve Chien</a>, NASA JPL, USA</li>
+                    <li><a href="https://www.gauthier-picard.info/">Gauthier Picard</a>, ONERA, France</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div id="co-chairs" class="outline-3">
+            <h3 id="header-co-chairs"><a id="id-co-chairs"></a>Co-Chair</h3>
+            <div class="outline-text-3" id="text-co-chairs">
+                <p>
+                <ul>
+                    <li><a href="https://ai.jpl.nasa.gov/public/people/itai/">Itai Zilberstein</a>, NASA JPL, USA</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div id="pc" class="outline-3">
+            <h3 id="header-pc"><a id="id-pc"></a>Programme Committee</h3>
+            <div class="outline-text-3" id="text-pc">
+                <p>
+                <ul>
+                    <li>Simone Fratini, Solenix, Germany</li>
+                    <li>Tal Grinshpoun, Ariel University, Israel</li>
+                    <li>Jonathan Guerra, Airbus Defence and Space, France</li>
+                    <li>Elsy Kaddoum, University of Toulouse, France</li>
+                    <li>Cédric Pralet, ONERA, France</li>
+                    <li>Stéphanie Roussel, ONERA, France</li>
+                    <li>Caleb Wagner, NASA JPL, USA</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div id="postamble" class="status">
+        <p class="author">Author: Gauthier Picard</p>
+        <p class="email">Email: <a href="mailto:gauthier.picard@onera.fr">gauthier.picard@onera.fr</a></p>
+        <script>
+            if (Date.parse(document.lastModified) != 0)
+                document.write('<p class="date">Last modified: '
+                           + document.lastModified
+                           + '</p>');
+        </script>
+        <!--p class="date">Last modified: </p-->
+
+    </div>
 </div>
 </body>
 </html>
